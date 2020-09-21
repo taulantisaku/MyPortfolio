@@ -36,8 +36,10 @@ $(document).ready(function() {
 
 
         var skillsTopOffset = $(".skillsSection").offset().top;
-
-        $(window).scroll(function() {
+        var statsTopOffset = $(".statsSection").offset().top;
+        var countUpFinished = false;
+		
+		  $(window).scroll(function() {
 
         	if(window.pageYOffset > skillsTopOffset - $(window).height() + 200)
 
@@ -51,7 +53,24 @@ $(document).ready(function() {
 		         	onStep: function(from,to,percent){
 		         		$(this.el).find('.percent').text(Math.round(percent));
 		         	}
+
+
       		  });
+
+
+			if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
+
+				$(".counter").each(function() {
+        	var element = $(this);
+        	var endVal = parseInt(element.text());
+
+        	element.countup(endVal);
+
+        })
+
+				countUpFinished = true;
+
+			}
 
         });
 
@@ -63,5 +82,5 @@ $(document).ready(function() {
         })
 
 
-})
+});
 

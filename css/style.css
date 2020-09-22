@@ -154,7 +154,7 @@ body {
 }
 
 .filter a {
-	color: ##bdc3c7;
+	color: #bdc3c7;
 	border: 1px solid #bdc3c7;
 	padding: 10px 18px;
 	display: block;
@@ -178,8 +178,8 @@ body {
 }
 
 .filter .current {
-	background-color: red;
-	border-color: red;
+	background-color: #e74c3c;
+	border-color: #e74c3c;
 	color: #fff;
 }
 

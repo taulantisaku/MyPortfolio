@@ -90,7 +90,7 @@ $(document).ready(function() {
         		easing: 'linear',
         		queue: false
         	}
-        })
+        });
 
 
         $("#filters a").click(function(){
@@ -100,8 +100,8 @@ $(document).ready(function() {
 
         	var selector = $(this).attr("data-filter");
 
-	        	$(".items").isotope({
-	        	filter: 'selector',
+	        $(".items").isotope({
+	        	filter: '.items-selector',
 	        	animationOptions: {
 	        		duration: 1500,
 	        		easing: 'linear',
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
 	       return false;
 
-        });
+        })
 
 });
 

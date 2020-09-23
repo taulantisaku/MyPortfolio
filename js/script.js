@@ -1,3 +1,23 @@
+$(window).on("load",function(){
+
+	$(".loader .inner").fadeOut(500, function(){
+		$(".loader").fadeOut(750);
+	});
+
+	 $(".items").isotope({
+        	filter: '*',
+        	animationOptions: {
+        		duration: 1500,
+        		easing: 'linear',
+        		queue: false
+        	}
+        });
+
+})
+
+
+
+
 $(document).ready(function() {
 
 
@@ -61,12 +81,12 @@ $(document).ready(function() {
 			if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
 
 				$(".counter").each(function() {
-        	var element = $(this);
-        	var endVal = parseInt(element.text());
+		        	var element = $(this);
+		        	var endVal = parseInt(element.text());
 
-        	element.countup(endVal);
+		        	element.countup(endVal);
 
-        })
+        	})
 
 				countUpFinished = true;
 
@@ -138,9 +158,23 @@ $(document).ready(function() {
 });
 
 
+	$("#navigation li a").click(function(e){
+
+		e.preventDefault
+
+		var targetElement = $(this).attr("href");
+		var targetPosition = $(targetElement).offset().top;
+		$("html,body").animate({ scrollTop: targetPosition - 50 },"slow");
+
+
+	});
+
+
+
+
       $("#filters a").click(function(e){
 
-        	e.preventdefault();
+        	e.preventDefault();
 
         	$("#filters .current").removeClass("current");
         	$(this).addClass("current");
@@ -159,3 +193,6 @@ $(document).ready(function() {
 	       return false;
 
         });
+
+      
+

@@ -193,6 +193,10 @@ body {
 	width: 100%;
 }
 
+ul .items {
+	align-self: center;
+}
+
 .items li img {
 	width: 100%;
 

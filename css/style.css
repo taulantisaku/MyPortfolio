@@ -10,7 +10,7 @@ body {
 	height: 100%;
 	position: absolute;
 	z-index: 3;
-	background-color: rgba(0 ,0 ,0, 0.4);
+	background-color: rgba(0 ,0 ,0, 0.6);
 }
 
 .titleMessage {
@@ -22,6 +22,28 @@ body {
 	text-align: center;
 	margin-top: 250px;
 }
+.modal-backdrop.show{
+	opacity: 0 !important;
+	
+}
+
+.form-group {
+	z-index: 1000!important;
+}
+
+.modal-backdrop {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+}
+.btn.btn-primary:hover {
+	border: 3px solid white;
+}
+
+
 
 .titleMessage .heading p {
 	color: #fff;
@@ -46,6 +68,7 @@ body {
 .aboutImage {
 	max-width: 100%;
 }
+
 
 .skillsSection,
 .contactSection {
@@ -193,9 +216,6 @@ body {
 	width: 100%;
 }
 
-ul .items {
-	align-self: center;
-}
 
 .items li img {
 	width: 100%;
@@ -360,3 +380,4 @@ ul .items {
 	height: 100%;
 	background: url(../icons/loader.gif) center center no-repeat;
 }
+

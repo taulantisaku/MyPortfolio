@@ -14,7 +14,10 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-
+	<!-- <style type="text/css">
+		.oldClass {
+			margin-top: 40% ;	}
+	</style> -->
 </head>
 <body>
 
@@ -94,7 +97,7 @@
   </div>
 </div>
 
-<nav id="navigation" class="navbar navbar-expand-lg">
+<nav id="navigation" class="oldClass navbar navbar-expand-lg">
 	  <a class="navbar-brand" href="#">Taulant</a>
 
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -614,7 +617,24 @@
 
 
 
+<script type="text/javascript">
+		window.onscroll = function() {myFunction()};
 
+			var navbar = document.getElementById("navigation");
+			var sticky = navbar.offsetTop;
+
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+			    navbar.classList.add("sticky")
+			    navbar.classList.remove('oldClass');
+			  } else {
+			 
+			    navbar.classList.add('oldClass');
+			    navbar.classList.remove("sticky");
+			  }
+			}
+			// Testo
+	</script>
 
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
@@ -634,8 +654,7 @@
 	<script src="js/script.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-
+	
 
 </body>
-</html>
+</html

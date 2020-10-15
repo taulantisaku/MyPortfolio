@@ -618,22 +618,61 @@
 
 
 <script type="text/javascript">
-		window.onscroll = function() {myFunction()};
+		// window.onscroll = function() {myFunction()};
 
-			var navbar = document.getElementById("navigation");
-			var sticky = navbar.offsetTop;
+		// 	var navbar = document.getElementById("navigation");
+		// 	var sticky = navbar.offsetTop;
 
-			function myFunction() {
-			  if (window.pageYOffset >= sticky) {
-			    navbar.classList.add("sticky")
-			    navbar.classList.remove('oldClass');
-			  } else {
+		// 	function myFunction() {
+		// 	  if (window.pageYOffset >= sticky) {
+		// 	    navbar.classList.add("sticky")
+		// 	    navbar.classList.remove('oldClass');
+		// 	  } else {
 			 
-			    navbar.classList.add('oldClass');
-			    navbar.classList.remove("sticky");
-			  }
-			}
+		// 	    navbar.classList.add('oldClass');
+		// 	    navbar.classList.remove("sticky");
+		// 	  }
+		// 	}
 			// Testo
+
+			// window.onscroll = function() {myFunction()};
+
+			// var navbar = document.getElementById("navigation");
+			// var sticky = navbar.offsetTop;
+
+			// function myFunction() {
+			// 	if(document.documentElement.scrollTop > 754) {
+			// 		navbar.classList.add("sticky");
+			// 		document.body("padding-top",nav.outerHeight() + "px");
+
+			// 	} else {
+			// 		navbar.classList.remove("sticky");
+			// 		document.body("padding-top",0);
+			// 	}
+			// }
+
+
+      const nav = $("#navigation");
+      const navTop = nav.offset().top;
+
+      $(window).on("scroll", stickyNavigation);
+
+      function stickyNavigation() {
+
+      	var body = $("body");
+
+      	if($(window).scrollTop() >= 754) {
+      		body.css("padding-top",nav.outerHeight() + "px");
+      		body.addClass("fixedNav");
+      	}
+      	else {
+      		body.css("padding-top",0);
+      		body.removeClass("fixedNav");
+      	}
+
+    }
+
+
 	</script>
 
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>

@@ -148,7 +148,7 @@ $(document).ready(function() {
       	var body = $("body");
 
       	if($(window).scrollTop() >= navTop) {
-      		body.css("padding-top",nav.outerHeight() - 10 + "px");
+      		body.css("padding-top",nav.outerHeight() + "px");
       		body.addClass("fixedNav");
       	}
       	else {
@@ -158,6 +158,8 @@ $(document).ready(function() {
 
     }
 
+
+    document.body("padding-top",0);
 
 });
 
